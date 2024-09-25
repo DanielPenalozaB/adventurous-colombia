@@ -1,0 +1,612 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --gossip-50: #efffc2;
+  --gossip: #ccff6b;
+  --gossip-200: #9ffa00;
+  --gossip-300: #8de005;
+  --gossip-400: #7cc50c;
+  --gossip-500: #67ab08;
+  --gossip-600: #528c02;
+  --gossip-700: #437307;
+  --gossip-800: #3a5f0c;
+  --gossip-900: #2f4e0e;
+  --gossip-950: #193102;
+}
+
+.text-gossip {
+  color: var(--gossip-400) !important;
+}
+
+.merriweather-light {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.merriweather-light-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.merriweather-regular-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.merriweather-bold-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem !important;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem !important;
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  list-style-position: unset;
+}
+
+.mobile-menu-list .nav-item {
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+nav #nav-home {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.25rem;
+  color: var(--gossip-200);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-out;
+}
+
+nav #nav-home:hover {
+  color: var(--gossip-300);
+}
+
+nav .nav-link {
+  color: var(--gossip-50) !important;
+}
+
+nav .nav-link:hover {
+  color: var(--gossip) !important;
+}
+
+nav .nav-item {
+  padding: 0 0.5rem !important;
+}
+
+nav .nav-item .btn {
+  color: rgb(44, 44, 44) !important;
+  font-weight: 500;
+  background-color: var(--gossip-200);
+}
+
+nav .nav-item .btn:hover {
+  background-color: var(--gossip-400) !important;
+}
+
+section {
+  padding: 4rem;
+  scroll-margin-top: 110px;
+  /* Ajusta el valor al tamaño de tu navbar */
+}
+
+#hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+  border-radius: 0 0 2rem 2rem;
+  background-image: url('/assets/images/home/rioblanco.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  overflow: hidden;
+}
+
+#hero #hero-inscription {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+
+#hero #hero-inscription:hover {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+blockquote img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+blockquote .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: white;
+}
+
+blockquote .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+blockquote .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+blockquote .author {
+  color: #d4d4d4;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+blockquote .author a {
+  color: inherit;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+section#activities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  padding: 4rem;
+}
+
+section#activities .section-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+section#activities .section-card h1 {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: var(--gossip-950);
+}
+
+section#activities .section-card h1 span {
+  text-transform: uppercase;
+  color: var(--gossip-400);
+  text-decoration: underline;
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+section#activities .section-card p {
+  color: var(--gossip-950);
+  font-size: 1.25rem;
+}
+
+section#activities .section-card button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 1rem;
+  width: fit-content;
+  color: white;
+  background-color: var(--gossip-300);
+  font-size: 1.25rem;
+}
+
+section#activities .section-card button:hover {
+  background-color: var(--gossip-400);
+}
+
+section#activities .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  min-height: 450px;
+  min-width: 250px;
+  border-radius: 2.5rem;
+  border: none;
+  overflow: hidden;
+}
+
+section#activities .card a {
+  position: absolute;
+  top: 2rem;
+  right: -10rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  background-color: var(--gossip-400);
+  border-radius: 0.5rem;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+section#activities .card a:hover {
+  background-color: var(--gossip-500) !important;
+}
+
+section#activities .card:hover a {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  background-color: var(--gossip-400);
+  border-radius: 0.5rem;
+  opacity: 1;
+  z-index: 10;
+}
+
+section#activities .card h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  z-index: 10;
+}
+
+section#activities .card p {
+  font-size: 1.25rem;
+  color: #f5f5f5;
+  z-index: 10;
+}
+
+section#activities .card img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+section#gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  padding: 4rem;
+}
+
+.section-card-up {
+  display: none;
+}
+
+.section-card-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+section#gallery .section-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+section#gallery .section-card h1 {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  font-size: 2.5rem;
+  color: var(--gossip-950);
+}
+
+section#gallery .section-card h1 span {
+  text-transform: uppercase;
+  color: var(--gossip-400);
+  text-decoration: underline;
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+section#gallery .section-card p {
+  color: var(--gossip-950);
+  font-size: 1.25rem;
+}
+
+section#gallery .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem;
+  min-height: 450px;
+  min-width: 250px;
+  border-radius: 2.5rem;
+  border: none;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section#testimonials h2 {
+  font-family: "Merriweather", serif;
+  color: var(--gossip-950);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+section#contact h2 {
+  font-family: "Merriweather", serif;
+  color: var(--gossip-950);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+section#contact .social-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+section#contact .social-part i {
+  cursor: pointer;
+}
+
+section#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section#contact form textarea {
+  border: #d4d4d4 1px solid;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  min-height: 12rem;
+  border-radius: 1rem;
+}
+
+section#contact form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  background-color: var(--gossip-300);
+  font-size: 1.25rem;
+}
+
+section#contact form button:hover {
+  background-color: var(--gossip-400);
+}
+
+section#team h2 {
+  font-family: "Merriweather", serif;
+  color: var(--gossip-950);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+section#team p {
+  color: var(--gossip-950);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+section#team .card.people {
+  margin: 0 auto;
+}
+
+section#faq h2 {
+  font-family: "Merriweather", serif;
+  color: var(--gossip-950);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.user-image {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-content p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.ratings i {
+  color: var(--gossip-400);
+}
+
+@media (max-width: 768px) {
+  section#gallery {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav .navbar-nav {
+    display: none;
+    /* Oculto en vista móvil */
+  }
+
+  nav .navbar-mobile {
+    display: block;
+    /* Muestra el botón de menú */
+    background-color: transparent;
+    border: none;
+    color: var(--gossip-200);
+  }
+
+  section#activities {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  section#gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .section-card-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .section-card-down {
+    display: none;
+  }
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Proyecto</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top my-5 d-block"
+    data-navbar-on-scroll="data-navbar-on-scroll">
+    <div class="container py-4">
+      <a id="nav-home" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" id="navbar-logo" data-name="Layer 1" viewBox="0 0 24 24" height="24"
+          width="24" fill="currentColor">
+          <path
+            d="M13,2.051V1c0-.552-.447-1-1-1s-1,.448-1,1v1.051C5.402,2.558,1,7.272,1,13c0,6.065,4.935,11,11,11s11-4.935,11-11c0-5.728-4.402-10.442-10-10.949Zm0,19.89v-.941c0-.553-.447-1-1-1s-1,.447-1,1v.941c-4.165-.463-7.478-3.776-7.941-7.941h.941c.553,0,1-.447,1-1s-.447-1-1-1h-.941c.463-4.164,3.776-7.478,7.941-7.941v.941c0,.552,.447,1,1,1s1-.448,1-1v-.941c4.165,.463,7.478,3.777,7.941,7.941h-.941c-.553,0-1,.448-1,1s.447,1,1,1h.941c-.463,4.165-3.776,7.478-7.941,7.941Zm2.33-10.269c-.353-.918-1.082-1.648-2.002-2.002l-5.469-2.104c-.369-.141-.786-.053-1.066,.226-.279,.279-.368,.697-.227,1.066l2.104,5.468c.354,.92,1.083,1.649,2.002,2.003l5.469,2.104c.117,.045,.238,.066,.359,.066,.261,0,.516-.102,.707-.293,.279-.279,.368-.697,.227-1.066l-2.104-5.468Zm-3.94,2.791c-.392-.15-.702-.461-.853-.854l-1.296-3.368,3.368,1.295c.393,.151,.703,.462,.854,.853l1.296,3.369-3.369-1.296Z" />
+        </svg>
+        Adventurous Colombia
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item px-3">
+          <a id="nav-activities" class="nav-link fw-medium scroll-link" aria-current="page" href="#activities">
+            Actividades
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-gallery" class="nav-link fw-medium scroll-link" aria-current="page" href="#gallery">
+            Galer&iacute;a
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-testimonials" class="nav-link fw-medium scroll-link" aria-current="page" href="#testimonials">
+            Testimonios
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-contact" class="nav-link fw-medium scroll-link" aria-current="page" href="#contact">
+            Contacto
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-team" class="nav-link fw-medium scroll-link" aria-current="page" href="#team">
+            Team
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-faq" class="nav-link fw-medium scroll-link" aria-current="page" href="#faq">
+            FAQ
+          </a>
+        </li>
+      </ul>
+      <button class="navbar-mobile" type="button" title="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="24" height="24"
+          fill="currentColor">
+          <rect y="11" width="24" height="2" rx="1" />
+          <rect y="4" width="24" height="2" rx="1" />
+          <rect y="18" width="24" height="2" rx="1" />
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-menu d-none container">
+      <ul class="mobile-menu-list">
+        <li class="nav-item px-3">
+          <a id="nav-activities" class="nav-link fw-medium scroll-link" aria-current="page" href="#activities">
+            Actividades
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-gallery" class="nav-link fw-medium scroll-link" aria-current="page" href="#gallery">
+            Galer&iacute;a
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-testimonials" class="nav-link fw-medium scroll-link" aria-current="page" href="#testimonials">
+            Testimonios
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-contact" class="nav-link fw-medium scroll-link" aria-current="page" href="#contact">
+            Contacto
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-team" class="nav-link fw-medium scroll-link" aria-current="page" href="#team">
+            Team
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a id="nav-faq" class="nav-link fw-medium scroll-link" aria-current="page" href="#faq">
+            FAQ
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section id="hero" cite="https://unsplash.com/photos/a-dirt-road-going-through-a-lush-green-hillside-YXvP3etIEsg">
+    <blockquote id="hero-inscription">
+      <img
+        src="https://images.unsplash.com/profile-1600359639055-612b6049c390image?w=64&dpr=1&crop=faces&bg=%23fff&h=64&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+        alt="Backroad Packers" height="40" width="40">
+      <div class="data">
+        <span class="title">
+          Río Blanco, Tolima
+        </span>
+        <span class="author">
+          por
+          <a href="https://unsplash.com/@backroadpackers" rel="noopener" target="_blank" title="Backroad Packers">
+            Backroad Packers
+          </a>
+        </span>
+      </div>
+    </blockquote>
+  </section>
+  <section id="activities">
+    <div class="section-card">
+      <h1 class="merriweather-bold">
+        Actividades para hacer
+        <span>en Colombia</span>
+      </h1>
+      <p>
+        Explora las aventuras <b>m&aacute;s emocionantes</b> que <span class="text-gossip fw-bold">Colombia</span> tiene para ofrecer.
+        <br>
+        <br>
+        Desde lo alto de sus montañas hasta lo profundo de sus
+        océanos, aquí encontrarás actividades que pondrán a <b>prueba tus sentidos</b> y te <b>conectará</b> con la naturaleza de una
+        manera única.
+      </p>
+      <button type="button">
+        Ver todo
+        <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="16" height="16"
+          fill="currentColor">
+          <path
+            d="M6.079,22.5a1.5,1.5,0,0,1,.44-1.06l7.672-7.672a2.5,2.5,0,0,0,0-3.536L6.529,2.565A1.5,1.5,0,0,1,8.65.444l7.662,7.661a5.506,5.506,0,0,1,0,7.779L8.64,23.556A1.5,1.5,0,0,1,6.079,22.5Z" />
+        </svg>
+      </button>
+    </div>
+    <div class="card">
+      <a href="#">
+        Ver m&aacute;s
+      </a>
+      <h2 class="merriweather-bold">
+        Parapente en el Valle del Cauca
+      </h2>
+      <p>
+        Disfruta de la sensación de volar en el cielo mientras observas el majestuoso paisaje del Valle del Cauca desde
+        lo alto.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1594393635540-2cfd7426efb2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Parapente en el Valle del Cauca">
+    </div>
+    <div class="card">
+      <a href="#">
+        Ver m&aacute;s
+      </a>
+      <h2 class="merriweather-bold">
+        Rafting en el Río Fonce, Santander
+      </h2>
+      <p>
+        Esta actividad es perfecta para aquellos que buscan adrenalina en medio de la exuberante naturaleza de Santander.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1723849644958-2de1a256b9e9?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Rafting en el Río Fonce, Santander">
+    </div>
+    <div class="card">
+      <a href="#">
+        Ver m&aacute;s
+      </a>
+      <h2 class="merriweather-bold">
+        Buceo en el Parque Nacional Natural Corales del Rosario
+      </h2>
+      <p>
+        Sumérgete en las aguas cristalinas del Caribe colombiano y descubre la fascinante vida marina en uno de los parques naturales más hermosos del país.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1517627043994-b991abb62fc8?q=80&w=1917&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Buceo en el Parque Nacional Natural Corales del Rosario">
+    </div>
+  </section>
+  <section id="gallery">
+    <div class="section-card-up">
+      <h1 class="merriweather-bold text-gossip">
+        Galer&iacute;a
+      </h1>
+      <p>
+        Cada imagen cuenta una historia de aventura, naturaleza y emociones vividas en los destinos más espectaculares de
+        Colombia.
+      </p>
+    </div>
+    <div class="card"
+      style="background-image: url('https://images.unsplash.com/photo-1594393635540-2cfd7426efb2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    </div>
+    <div class="card"
+      style="background-image: url('https://images.unsplash.com/photo-1723849644958-2de1a256b9e9?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    </div>
+    <div class="card"
+      style="background-image: url('https://images.unsplash.com/photo-1517627043994-b991abb62fc8?q=80&w=1917&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    </div>
+    <div class="section-card-down">
+      <h1 class="merriweather-bold text-gossip">
+        Galer&iacute;a
+      </h1>
+      <p>
+        Cada imagen cuenta una historia de aventura, naturaleza y emociones vividas en los destinos más espectaculares de
+        Colombia.
+      </p>
+    </div>
+    <div class="card"
+      style="background-image: url('https://images.unsplash.com/photo-1501554728187-ce583db33af7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    </div>
+    <div class="card"
+      style="background-image: url('https://images.unsplash.com/photo-1551158025-3d352d73a030?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    </div>
+    <div class="card"
+      style="background-image: url('https://images.unsplash.com/photo-1598335792171-8d789af7f80d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    </div>
+    <div class="card"
+      style="background-image: url('https://images.unsplash.com/photo-1534413340928-7bd74b65196f?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    </div>
+  </section>
+  <section id="testimonials">
+    <h2>Testimonios</h2>
+    <div class="container mt-5 mb-5">
+      <div class="row g-2">
+        <div class="col-md-4">
+          <div class="card p-3 text-center px-4">
+            <div class="user-image">
+              <img
+                src="https://images.unsplash.com/photo-1698510047345-ff32de8a3b74?q=80&w=1992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="rounded-circle" width="80" title="Juan C. (Argentina)">
+            </div>
+            <div class="user-content">
+              <h5 class="mb-0 merriweather-regular mt-3">Juan C. (Argentina)</h5>
+              <p>"Colombia superó todas mis expectativas. Desde la vibrante cultura en Bogotá hasta las tranquilas playas de Cartagena,
+              cada momento fue inolvidable. El tour de aventura fue el punto culminante de mi viaje: hacer senderismo en el Parque
+              Nacional Tayrona fue una experiencia que nunca olvidaré."</p>
+            </div>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 text-center px-4">
+            <div class="user-image">
+              <img
+                src="https://images.unsplash.com/photo-1624395213043-fa2e123b2656?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="rounded-circle" width="80" title="David L. (Estados Unidos)">
+            </div>
+            <div class="user-content">
+              <h5 class="mb-0 merriweather-regular mt-3">David L. (Estados Unidos)</h5>
+              <p>"Mi viaje a Colombia fue una auténtica aventura. Hacer rafting en San Gil y explorar las selvas amazónicas fue
+              increíble. Cada actividad estuvo perfectamente organizada, y los guías locales fueron profesionales y conocedores. Es el
+              destino perfecto para los amantes de la naturaleza y la aventura."</p>
+            </div>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 text-center px-4">
+            <div class="user-image">
+              <img
+                src="https://images.unsplash.com/photo-1594369428909-cf575675ca9a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="rounded-circle" width="80" title="Sara M. (España)">
+            </div>
+            <div class="user-content">
+              <h5 class="mb-0 merriweather-regular mt-3">Sara M. (España)</h5>
+              <p>"Siempre quise visitar Colombia, pero no sabía lo que me esperaba. Las actividades de ecoturismo fueron excepcionales,
+              especialmente el avistamiento de aves en el Eje Cafetero. La amabilidad de la gente y la belleza de los paisajes me
+              hicieron sentir como en casa. ¡Sin duda, regresaré!"</p>
+            </div>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contacto</h2>
+    <form action="">
+      <p class="text-center mb-0">
+        <b>Adventurous Colombia</b> es una iniciativa de la comunidad de viajeros que se dedica a ofrecer experiencias inolvidables.
+        <br>
+        <br>
+        Conoce m&aacute;s en nuestras redes sociales.
+      </p>
+      <div class="social-part">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </div>
+      <textarea name="message" id="message" cols="30" rows="6" placeholder="Message"></textarea>
+      <button type="button">Send</button>
+    </form>
+  </section>
+  <section id="team">
+    <h2>Team</h2>
+    <p>Las personas que hacen de <b>Adventurous Colombia</b> una experiencia inolvidable.</p>
+    <div class="card people" style="width: 18rem;">
+      <img class="card-img-top" src="https://avatars.githubusercontent.com/u/118763939?v=4" alt="Juan Daniel Peñaloza">
+      <div class="card-body">
+        <h5 class="card-title">Juan Daniel Peñaloza</h5>
+        <p class="card-text mb-0">Estudiante de ingeniería de sistemas de 21 años, apasionado por el mundo de la programaci&oacute;n y las diferentes ramas que esta abarca.</p>
+      </div>
+      <h5 class="ml-3">Hobbies</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Adoro programar</li>
+        <li class="list-group-item">Me gusta preparar recetas nuevas</li>
+        <li class="list-group-item">Me gusta tocar m&uacute;sica</li>
+      </ul>
+      <h5 class="ml-3 mt-4">Estudios</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Tecn&oacute;logo en An&iacute;lisis y Desarrollo de Sistemas (TADSI)</li>
+        <li class="list-group-item">Pr&oacute;ximo Ingeniero de Sistemas</li>
+        <li class="list-group-item">Varios cursos de programaci&oacute;n</li>
+      </ul>
+      <h5 class="ml-3 mt-4">Conocimientos t&eacute;cnicos</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Frameworks de JavaScript (React.js, Vue.js, Angular, Next.js, Astro, Nest, Express)</li>
+        <li class="list-group-item">Tecnolog&iacute;as m&oacute;viles: Flutter & React Native</li>
+        <li class="list-group-item">Diseño de interfaces web con Figma</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://github.com/DanielPenalozaB/adventurous-colombia" target="_blank" rel="noopener noreferrer" class="card-link">C&oacute;digo en GitHub</a>
+      </div>
+    </div>
+  </section>
+  <section id="faq">
+    <h2>FAQ's</h2>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            ¿Cuál es la mejor época para visitar Colombia?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            La mejor época para visitar Colombia depende de la región que quieras explorar. En general, diciembre a
+            marzo es ideal para la mayoría de las áreas debido al clima seco. Si planeas visitar la Amazonía o las
+            playas del Caribe, asegúrate de verificar las condiciones climáticas locales.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            ¿Qué actividades de aventura ofrecen en Colombia?
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Colombia ofrece una amplia variedad de actividades de aventura, desde senderismo en la Sierra Nevada, parapente en
+            Medellín, buceo en San Andrés y Providencia, hasta rafting en el río Magdalena. También puedes disfrutar de tirolesa,
+            escalada en roca, y ciclismo de montaña.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            ¿Es seguro viajar por Colombia?
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Colombia ha mejorado significativamente su seguridad en los últimos años, convirtiéndose en un destino turístico cada
+            vez más popular. Sin embargo, como en cualquier país, es importante tomar precauciones. Se recomienda estar informado
+            sobre las áreas que visitas, seguir consejos locales y evitar zonas alejadas o no turísticas durante la noche.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container mt-5">
+    <footer class="py-5">
+      <div class="row d-flex justify-content-between">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>P&aacute;gina</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Inicio</a></li>
+            <li class="nav-item mb-2"><a href="#activities" class="nav-link p-0 text-body-secondary">Actividades</a></li>
+            <li class="nav-item mb-2"><a href="#gallery" class="nav-link p-0 text-body-secondary">Galer&iacute;a</a></li>
+            <li class="nav-item mb-2"><a href="#testimonials" class="nav-link p-0 text-body-secondary">Testimonios</a>
+            </li>
+            <li class="nav-item mb-2"><a href="#contact" class="nav-link p-0 text-body-secondary">Contacto</a></li>
+            <li class="nav-item mb-2"><a href="#team" class="nav-link p-0 text-body-secondary">Team</a></li>
+            <li class="nav-item mb-2"><a href="#faq" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2024 Adventurous Colombia. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- Bootstrap JS CDN -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <!-- Archivo principal de JavaScript -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
